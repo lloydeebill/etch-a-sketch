@@ -65,9 +65,6 @@ function createGrid(gridWidth) {
     cell.classList.add("cell");
   
     containerDiv.appendChild(cell);
-
-    cell.style.width = `${cellSize}px`;
-    cell.style.height = `${cellSize}px`;
   
     cell.addEventListener('mouseenter', function(event) {
       cell.classList.add("hover-on");
