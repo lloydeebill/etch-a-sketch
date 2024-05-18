@@ -61,18 +61,38 @@ function createGrid(gridWidth) {
   for ( let i = 0 ; i < gridArea; i++ ) {
 
     const cell = document.createElement("div");
-  
     cell.classList.add("cell");
-  
     containerDiv.appendChild(cell);
   
-    cell.addEventListener('mouseenter', function(event) {
-      cell.classList.add("hover-on");
-      const randomColor = getRandomColor();
-      cell.style.setProperty('--hover-color',randomColor);
-    });
-  
   }
+
+  let isMouseDown = false;
+
+  document.addEventListener('mousedown', () => {
+    isMouseDown = true;
+  });
+
+  document.addEventListener('mouseup',() => {
+    isMouseDown = false;
+  })
+
+  document.addEventListener('mouseleave',() => {
+    isMouseDown = false;
+  });
+
+
+
+  const cells = document.querySelectorAll(".cell");
+  cells.forEach(cell => {
+    cell.addEventListener('mouseenter', function() {
+      if (!isMouseDown) {
+        cell.classList.add("hover-on");
+        const randomColor = getRandomColor();
+        cell.style.setProperty('--hover-color',randomColor);
+      }
+    });
+  })
+
   
 }
 

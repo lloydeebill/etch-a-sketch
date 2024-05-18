@@ -4,6 +4,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: white;
 
 }
 
@@ -16,7 +17,7 @@ body {
   height: 700px;
   display: flex;
   flex-wrap: wrap;
-  background-color: whitesmoke;
+  background-color: white;
   border: 2px solid black;
 
 
@@ -24,7 +25,7 @@ body {
 
 .cell {
   box-sizing: border-box;
-  background-color: white;
+  background-color: whitesmoke;
   width: var(--cell-size);
   height: var(--cell-size);
   padding: 0;
