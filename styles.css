@@ -12,8 +12,8 @@ body {
 }
 
 .container {
-  width: 485px;
-  height: 485px;
+  width: 700px;
+  height: 700px;
   display: flex;
   flex-wrap: wrap;
   background-color: whitesmoke;
@@ -25,13 +25,14 @@ body {
 .cell {
   box-sizing: border-box;
   background-color: white;
-  width: 30px;
-  height: 30px;
+  width: var(--cell-size);
+  height: var(--cell-size);
   padding: 0;
   margin: 0;
 }
 
 
 .hover-on {
-  background-color: yellow;
+  background-color: var(--hover-color);
+
 }
