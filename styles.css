@@ -10,7 +10,8 @@
   height: 485px;
   display: flex;
   flex-wrap: wrap;
-  background-color: red;
+  background-color: whitesmoke;
+  border: 2px solid pink;
 
 
 }
