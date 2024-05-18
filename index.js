@@ -6,9 +6,12 @@ const containerDiv = document.querySelector(".container");
 
 const startButton = document.querySelector(".start-button"); 
 const changeButton = document.querySelector(".change-button"); 
+const resetButton = document.querySelector(".reset-button"); 
+
 
 
 startButton.addEventListener("click", () => createGrid(16));
+resetButton.addEventListener("click", resetGrid);
 changeButton.addEventListener("click", () => {
 
   let userInput = prompt("Input size of grid from 1-100:");
@@ -23,6 +26,19 @@ changeButton.addEventListener("click", () => {
 
 });
 
+function resetGrid(){
+
+  const cells = document.querySelectorAll(".cell");
+
+  cells.forEach(cell => {
+    cell.classList.remove("hover-on");
+  });
+
+}
+
+function randomPenColor() {
+
+}
 
 
 function createGrid(gridWidth) {
